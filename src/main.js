@@ -3,7 +3,9 @@ import App from './App.vue'
 import VueParallaxJs from 'vue-parallax-js'
 
 //Просмотр галереи
-import VueEasyLightbox from 'vue-easy-lightbox'
+import VueEasyLightbox from 'vue-easy-lightbox';
+
+
 
 Vue.use(VueEasyLightbox)
 

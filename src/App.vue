@@ -25,6 +25,8 @@ import HomeGallery from "./components/base/HomeGallery";
 import Header from "./components/base/Header";
 
 
+
+
 export default {
   name: 'App',
   components: {
@@ -35,7 +37,7 @@ export default {
     HomeKeySkills,
     HomeAboutMe,
     HomeFirstBlock,
-    Footer,
+    Footer
   },
 }
 </script>

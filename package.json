@@ -15,6 +15,7 @@
     "vue-carousel-card": "^2.0.0",
     "vue-easy-lightbox": "^0.16.1",
     "vue-fancybox": "^1.0.3",
+    "vue-masonry-gallery": "^1.1.1",
     "vue-parallax-js": "^0.2.3"
   },
   "devDependencies": {
