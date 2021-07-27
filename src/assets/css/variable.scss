@@ -1,0 +1,32 @@
+// font
+$font-base: 'IBM Plex Mono', Arial, sans-serif;
+$font-size-high: 700 48px / 140% $font-base; //лого
+$font-size-h1: 700 78px / 140% $font-base; //Главный заголовок
+$font-size-menu: 700 55px / 140% $font-base; //заголовок меню
+$font-size-h3: 700 24px / 140% $font-base;
+$font-size-small: 400 16px / 150% $font-base; //текст
+
+// color
+$color-text: #181823;
+$color-text-btn: #fff;
+$color-prime: #fed9c9;
+$color-main: #8491A0;
+
+$color-prime-active: #152075;
+$color-sub: #5C3882;
+$color-sub-active: #401F62;
+$color-error: #FF5E5E;
+
+// indent
+$grid-gap: 20px;
+
+// responsive-breakpoints
+$responsive-breakpoints: (
+  xs: 767px,
+  sm: 768px,
+  md: 1100px,
+  lg: 1279px,
+  xl: 1920px,
+);
+
+

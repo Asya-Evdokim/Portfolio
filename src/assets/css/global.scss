@@ -1,0 +1,65 @@
+body, button, input {
+  font-family: 'IBM Plex Mono';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  color: $color-text;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1210px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @include respond-to('lg') {
+    padding: 0 40px;
+  }
+
+  @include respond-to('xs') {
+    padding: 0 20px;
+  }
+
+
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: $grid-gap;
+}
+
+.btn {
+
+}
+
+.dot {
+  color: $color-prime;
+}
+
+.title {
+  font: $font-size-h1;
+
+  @include respond-to('lg') {
+    font: $font-size-menu;
+  }
+  @include respond-to('xs') {
+    font: 700 32px / 38px $font-base;
+  }
+}
+
