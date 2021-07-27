@@ -3,21 +3,84 @@
   <h2 class="gallery__title title container">Фотографии<span class="dot">.</span></h2>
   <p class="gallery__subtitle subtitle container">Вот маленькая коллекция моих фотографий</p>
   <div class="gallery__items grid">
-    <figure class="gallery__item"><img src="~@/assets/img/gallery/img-1.jpg" alt="" class="gallery__img"></figure>
+    <figure  v-for="(src, index) in imgs"
+      :key="index"
+      class="pic gallery__item"
+      @click="() => showImg(index)"
+    >
+      <img :src="src"  alt="" class="gallery__img"></figure>
 <!--    <figure class="gallery__item"><img src="~@/assets/img/gallery/img-2.jpg" alt="" class="gallery__img"></figure>-->
-<!--    <figure class="gallery__item"><img src="~@/assets/img/gallery/img-3.jpg" alt="" class="gallery__img"></figure> -->
-    <figure class="gallery__item"><img src="~@/assets/img/gallery/img-4.jpg" alt="" class="gallery__img"></figure>
+<!--    <figure class="gallery__item"><img src="~@/assets/img/gallery/img-3.jpg" alt="" class="gallery__img"></figure> 
+    <figure class="gallery__item">
+      <img @click='show()' src="~@/assets/img/gallery/img-4.jpg" alt="" class="gallery__img">
+      </figure>
     <figure class="gallery__item"><img src="~@/assets/img/gallery/img-5.jpg" alt="" class="gallery__img"></figure>
     <figure class="gallery__item"><img src="~@/assets/img/gallery/img-7.jpg" alt="" class="gallery__img"></figure>
     <figure class="gallery__item"><img src="~@/assets/img/gallery/img-6.jpg" alt="" class="gallery__img"></figure>
     <figure class="gallery__item"><img src="~@/assets/img/gallery/img-8.jpg" alt="" class="gallery__img"></figure>
+    
+    <div
+      v-for="(src, index) in imgs"
+      :key="index"
+      class="pic"
+      @click="() => showImg(index)"
+    >
+      <img :src="src">
+      </div>-->
+     <vue-easy-lightbox
+      escDisabled
+      moveDisabled
+      :visible="visible"
+      :imgs="imgs"
+      :index="index"
+      @hide="handleHide">
+    </vue-easy-lightbox>
+  
+    
   </div>
+  
 </section>
 </template>
 
 <script>
+
 export default {
-  name: "HomeGallery"
+  name: "HomeGallery",
+
+  data() {
+    return {
+      imgs: [
+        '/gallery/img-1.jpg',
+        '/gallery/img-2.jpg',
+        '/gallery/img-3.jpg',
+        '/gallery/img-4.jpg',
+        '/gallery/img-5.jpg',
+        '/gallery/img-6.jpg',
+      
+      ],  // Img Url , string or Array of string
+      visible: false,
+      index: 0   // default: 0
+    }
+  },
+  methods: {
+
+    showImg (index) {
+        this.index = index
+        this.visible = true
+      },
+    showSingle() {
+      // this.imgs = 'http://via.placeholder.com/350x150'
+      // or
+      // this.imgs = { title: 'this is a placeholder', src: 'http://via.placeholder.com/350x150' }
+      this.show()
+    },
+    show() {
+      this.visible = true
+    },
+    handleHide() {
+      this.visible = false
+    }
+  }
 }
 </script>
 
